@@ -31,3 +31,28 @@ SOURCE_BRANCH=develop ./run-claude.sh "Complete feature"
 - GitHub: https://github.com/settings/tokens (scopes: repo, workflow)
 
 ## Cost: $0.50-$5 per run
+
+## 🤖 Claude Bot Auto-Review
+
+This automation can automatically request reviews from Claude Bot and wait for approval!
+
+### Setup
+
+1. **Install Claude GitHub App:** https://github.com/apps/claude
+2. Grant it access to your repository
+3. See [SETUP_CLAUDE_BOT.md](SETUP_CLAUDE_BOT.md) for detailed instructions
+
+### Usage
+```bash
+# Automatically creates PR, requests review, and waits for approval
+./run-claude.sh "Your task here"
+```
+
+The script will:
+- ✅ Create PR with changes
+- 🤖 Mention @claude to trigger review
+- ⏳ Wait for Claude Bot's response
+- 🔧 Auto-fix issues if requested
+- ✅ Exit only when PR is approved
+
+See [SETUP_CLAUDE_BOT.md](SETUP_CLAUDE_BOT.md) for full documentation.
