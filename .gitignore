@@ -1,0 +1,11 @@
+.env
+.env.local
+.env.*.local
+secrets/
+*.key
+*.pem
+logs/
+*.log
+.DS_Store
+.vscode/
+.idea/

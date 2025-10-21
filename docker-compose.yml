@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  claude-code:
+    build: .
+    container_name: claude-code-automation
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_REPO=${GITHUB_REPO}
+      - SOURCE_BRANCH=${SOURCE_BRANCH:-main}
+      - PROMPT=${PROMPT:-}
+      - GIT_EMAIL=${GIT_EMAIL:-claude-bot@example.com}
+      - GIT_NAME=${GIT_NAME:-Claude Bot}
+      - BRANCH_NAME=${BRANCH_NAME:-}
+      - BASE_BRANCH=${BASE_BRANCH:-}
+      - PR_TITLE=${PR_TITLE:-}
+      - COMMIT_MESSAGE=${COMMIT_MESSAGE:-}
